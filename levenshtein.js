@@ -17,7 +17,6 @@ function levenshteinDistance(source, target) {
     result[0].push(j);
   }
 
-
   for (i = 1; i <= source.length; i++) {
     for (j = 1; j <= target.length; j++) {
 
