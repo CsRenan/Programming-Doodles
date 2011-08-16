@@ -3,8 +3,7 @@
 // For example, to turn "rabbit" into "rabid", we drop a "b" and replace the "t" with a "d", for a total of two steps.
 // You can also use it to measure similarity between two strings. The shortest the distance, the more they are similar.
 
-function levenshteinDistance(source, target)
-{
+function levenshteinDistance(source, target) {
   var result = []; // This is going to be a matrix. The result we're looking for can be found by flood-filling it.
   var i, j;
 
