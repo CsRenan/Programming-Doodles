@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programing doodles</title>
+  <script type="application/javascript" src="js/brainfuck.js">
+  </script>
+  <script type="text/javascript">
+    var fucknize = function () {
+      var r = document.getElementById('bf-result');
+      var code = document.getElementById('bf-code').value;
+      var output;
+      output = brainfuck(code);
+      if (code) {
+        // WebKit, IE and Others
+        r.innerText = output;
+        // FireFox, Opera...
+        r.textContent = output;
+      } else {
+        r.innerText = r.textContent = "";
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/gh-pages.css"/>
+</head>
+<body>
+  <span>Brainfuck interpreter</span> <br/><br/>
+  Try a "Hello World!" with<br/>
+  <pre>
+    ++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.
+  </pre>
+  <textarea placeholder="Brain eater's space..." id="bf-code" rows="20"></textarea>
+  <br/><br/>
+  <button id="bf-code-run"
+          onclick="fucknize();">
+    Fuckenize your brain!
+  </button>
+  <br/><br/>
+  Fucked brain result
+  <textarea readonly id="bf-result" rows="15"></textarea>
+  <br/>
+</body>
+</html>
